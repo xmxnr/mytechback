@@ -1,0 +1,61 @@
+:root {
+	--principal-font-color: black;
+	--backgorund-color: azure;
+	--details-color: #cf5c36;
+	--details-color-2: #ffb20f;
+	--details-color-3: #342e37;
+	--font-medium-size: 16px;
+	--font-small-size: 8px;
+}
+
+html {
+	*::after,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: var(--backgorund-color);
+		color: var(--principal-font-color);
+	}
+
+	h1,
+	h2,
+	h3,
+	p,
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+
+	button {
+		font-family: inherit;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+/*Reusable Classes */
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-container {
+	display: grid;
+}
