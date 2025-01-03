@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<div className="felx-container">
+		<div className="flex-container">
 			<div>
 				<p>Hola mundo</p>
 			</div>

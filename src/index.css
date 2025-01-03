@@ -4,11 +4,14 @@
 	--details-color: #cf5c36;
 	--details-color-2: #ffb20f;
 	--details-color-3: #342e37;
+	--details-color-4: #bd8205;
 	--font-medium-size: 16px;
 	--font-small-size: 8px;
 }
 
 html {
+	box-sizing: border-box;
+	scrollbar-width: thin;
 	*::after,
 	*::before,
 	*::after {
