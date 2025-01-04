@@ -3,20 +3,21 @@ import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/shared/NavBar';
 import HomePage from './Pages/HomePage';
 import Footer from './components/shared/Footer';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 function App() {
 	return (
 		<div className="app__container">
-			<nav>
-				<NavBar />
-			</nav>
+			<NavBar />
+
 			<Routes>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/register" element={<Register />} />
 			</Routes>
 
-			<footer>
-				<Footer />
-			</footer>
+			<Footer />
 		</div>
 	);
 }

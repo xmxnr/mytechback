@@ -7,6 +7,10 @@
 	margin-top: 2vh;
 	z-index: 4;
 
+	.navbar__upper {
+		justify-content: space-between;
+	}
+
 	ul {
 		align-items: center;
 		justify-content: space-around;
@@ -19,25 +23,33 @@
 			display: flex;
 			flex-direction: column;
 			text-align: center;
+			height: 100%;
+			padding-right: 20px;
 
 			button {
+				height: 100%;
 				border-radius: 10px;
 				background-color: var(--details-color-3);
 				color: aliceblue;
-			}
-
-			:hover {
-				background-color: var(--details-color-2);
-				border: 1px solid;
+				font-size: 1rem;
 			}
 		}
 
+		button:hover {
+			background-color: var(--details-color-4);
+			border: 1px solid;
+		}
+
+		.navbar__title {
+			font-size: 25px;
+		}
+
 		.logo__container {
-			width: 5rem;
-			height: 100%;
+			width: 10rem;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			padding-left: 20px;
 
 			img {
 				width: 50%;

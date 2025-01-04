@@ -1,12 +1,18 @@
 import React from 'react';
+import './styles/Footer.css';
 
 const Footer = () => {
 	return (
-		<div className="flex-container">
+		<div className="footer__container flex-container">
 			<div>
-				<p>Hola mundo</p>
+				<p>
+					My Technician{' '}
+					<span>
+						<i class="bx bx-registered"></i>
+					</span>
+				</p>
 			</div>
-			<div></div>
+			<div>Hola Mundo</div>
 		</div>
 	);
 };

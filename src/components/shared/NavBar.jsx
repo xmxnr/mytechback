@@ -1,20 +1,27 @@
 import React from 'react';
 import './styles/NavBar.css';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 	return (
 		<div className="nav__container">
-			<ul className="flex-container">
+			<ul className="navbar__upper flex-container">
 				<li>
 					<div className="logo__container">
 						<img src="/icon_image.svg" alt="logo image" />
 					</div>
 				</li>
-				<li>Conocenos</li>
+				<Link to={'/'}>
+					<li className="navbar__title">Conocenos</li>
+				</Link>
 				<li>
 					<div className="button__container">
-						<button>Acceder</button> o<button>Registrate</button>
+						<Link to={'/login'}>
+							<button>Acceder</button>
+						</Link>
+						<span>o</span>
+						<button>Registrate</button>
 					</div>
 				</li>
 			</ul>

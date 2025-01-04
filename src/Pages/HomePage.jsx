@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/HomePage.css';
 import { motion } from 'motion/react';
+import Advantages from '../components/HomePage/Advantages';
 
 const HomePage = () => {
 	return (
@@ -14,7 +15,13 @@ const HomePage = () => {
 					</p>
 				</div>
 				<div className="landing__container container__center">
-					<img src="/landing-page-image1.jpg" alt="landingimage2" />
+					<motion.img
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ ease: 'easeOut', duration: 2 }}
+						src="/landing-page-image1.jpg"
+						alt="landingimage2"
+					/>
 					<p>Empieza hoy mismo. Tu proyecto merece a los mejores técnicos.</p>
 				</div>
 				<div className="landing__container container__right">
@@ -25,47 +32,7 @@ const HomePage = () => {
 					</p>
 				</div>
 			</section>
-			<section className="adventages__container flex-container">
-				<h2>Nuestros beneficios</h2>
-				<div className="adventages__textcontainer flex-container">
-					<motion.div
-						animate={{ rotate: 360 }}
-						whileHover={{ scale: 1.2, transition: 0.5 }}
-						whileTap={{ scale: 0.5 }}
-						className="icon__container"
-					>
-						<span className="material-symbols-outlined">construction</span>
-						<p>Expertos certificados en más de 4 especialidades.</p>
-					</motion.div>
-					<motion.div
-						animate={{ rotate: 360 }}
-						whileHover={{ scale: 1.2, transition: 0.5 }}
-						whileTap={{ scale: 0.5 }}
-						className="icon__container"
-					>
-						<span className="material-symbols-outlined">paid</span>
-						<p>Precios claros y sin sorpresas</p>
-					</motion.div>
-					<motion.div
-						animate={{ rotate: 360 }}
-						whileHover={{ scale: 1.2, transition: 0.5 }}
-						whileTap={{ scale: 0.5 }}
-						className="icon__container"
-					>
-						<span className="material-symbols-outlined">person_check</span>
-						<p>Reseñas de usuarios reales para ayudarte a decidir.</p>
-					</motion.div>
-					<motion.div
-						animate={{ rotate: 360 }}
-						whileHover={{ scale: 1.2, transition: 0.5 }}
-						whileTap={{ scale: 0.5 }}
-						className="icon__container"
-					>
-						<span className="material-symbols-outlined">plumbing</span>
-						<p>Acceso a técnicos en tiempo real</p>
-					</motion.div>
-				</div>
-			</section>
+			<Advantages />
 		</div>
 	);
 };
