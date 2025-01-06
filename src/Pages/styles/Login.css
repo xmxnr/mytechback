@@ -1,5 +1,5 @@
 .login__container {
-	width: 70vw;
+	min-width: 70vw;
 	height: 70vh;
 	margin-top: 3vh;
 	border-radius: 20px;
@@ -9,7 +9,7 @@
 	align-items: center;
 
 	h1 {
-		font-size: 5rem;
+		font-size: 2em;
 		font-family: 'Fugaz One', Impact, Haettenschweiler, 'Arial Narrow Bold',
 			sans-serif;
 	}
@@ -67,6 +67,10 @@
 			font-size: 1rem;
 			text-align: center;
 			font-family: 'Poppins', Arial, Helvetica, sans-serif;
+		}
+
+		.google__button {
+			color: black;
 		}
 	}
 }

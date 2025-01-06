@@ -15,39 +15,79 @@ const Advantages = () => {
 			<div className="adventages__textcontainer flex-container">
 				<motion.div
 					animate={{ rotate: 360 }}
-					whileHover={{ scale: 1.2, transition: 0.5 }}
+					whileHover={{
+						scale: 1.2,
+						transition: 0.5,
+						boxShadow: ' 10px 15px 36px -4px rgba(0,0,0,0.75)',
+						zIndex: 4,
+					}}
 					whileTap={{ scale: 0.5 }}
 					className="icon__container"
 				>
-					<span className="material-symbols-outlined">construction</span>
+					<motion.span
+						whileHover={{ rotate: 360, color: '#342e37' }}
+						className="material-symbols-outlined"
+					>
+						construction
+					</motion.span>
 					<p>Expertos certificados en más de 4 especialidades.</p>
 				</motion.div>
 				<motion.div
 					animate={{ rotate: 360 }}
-					whileHover={{ scale: 1.2, transition: 0.5 }}
+					whileHover={{
+						scale: 1.2,
+						transition: 0.5,
+						boxShadow: ' 10px 15px 36px -4px rgba(0,0,0,0.75)',
+						zIndex: 4,
+					}}
 					whileTap={{ scale: 0.5 }}
 					className="icon__container"
 				>
-					<span className="material-symbols-outlined">paid</span>
-					<p>Precios claros y sin sorpresas</p>
+					<motion.span
+						whileHover={{ rotate: 360, color: '#342e37' }}
+						className="material-symbols-outlined"
+					>
+						paid
+					</motion.span>
+					<p>Precios claros y sin sorpresas.</p>
 				</motion.div>
 				<motion.div
 					animate={{ rotate: 360 }}
-					whileHover={{ scale: 1.2, transition: 0.5 }}
+					whileHover={{
+						scale: 1.2,
+						transition: 0.5,
+						boxShadow: ' 10px 15px 36px -4px rgba(0,0,0,0.75)',
+						zIndex: 4,
+					}}
 					whileTap={{ scale: 0.5 }}
 					className="icon__container"
 				>
-					<span className="material-symbols-outlined">person_check</span>
+					<motion.span
+						whileHover={{ rotate: 360, color: '#342e37' }}
+						className="material-symbols-outlined"
+					>
+						person_check
+					</motion.span>
 					<p>Reseñas de usuarios reales para ayudarte a decidir.</p>
 				</motion.div>
 				<motion.div
 					animate={{ rotate: 360 }}
-					whileHover={{ scale: 1.2, transition: 0.5 }}
+					whileHover={{
+						scale: 1.2,
+						transition: 0.5,
+						boxShadow: ' 10px 15px 36px -4px rgba(0,0,0,0.75)',
+						zIndex: 4,
+					}}
 					whileTap={{ scale: 0.5 }}
 					className="icon__container"
 				>
-					<span className="material-symbols-outlined">plumbing</span>
-					<p>Acceso a técnicos en tiempo real</p>
+					<motion.span
+						whileHover={{ rotate: 360, color: '#342e37' }}
+						className="material-symbols-outlined"
+					>
+						plumbing
+					</motion.span>
+					<p>Acceso a técnicos en tiempo real.</p>
 				</motion.div>
 			</div>
 		</motion.section>

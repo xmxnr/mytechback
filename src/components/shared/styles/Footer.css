@@ -5,4 +5,26 @@
 	background-color: grey;
 	margin-top: 50px;
 	border-radius: 10px 10px 0 0;
+
+	.footer__container--left {
+		height: 100%;
+		width: 50%;
+		background-color: rgb(141, 141, 141);
+		color: aliceblue;
+		font-family: 'Fugaz One', Arial, Helvetica, sans-serif;
+		flex-direction: column;
+		text-align: center;
+
+		.footer__presentation {
+			font-family: 'Poppins';
+			font-size: 10px;
+		}
+	}
+
+	.footer__container--right {
+		color: aliceblue;
+		font-family: 'Fugaz One', Arial, Helvetica, sans-serif;
+		font-size: 3rem;
+		padding-right: 20px;
+	}
 }

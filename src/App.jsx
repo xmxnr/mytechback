@@ -8,7 +8,7 @@ import Register from './Pages/Register';
 
 function App() {
 	return (
-		<div className="app__container">
+		<div className="app__container flex-container">
 			<NavBar />
 
 			<Routes>

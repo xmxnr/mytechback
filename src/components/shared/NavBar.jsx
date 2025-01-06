@@ -21,7 +21,9 @@ const NavBar = () => {
 							<button>Acceder</button>
 						</Link>
 						<span>o</span>
-						<button>Registrate</button>
+						<Link to={'/Register'}>
+							<button>Registrate</button>
+						</Link>
 					</div>
 				</li>
 			</ul>

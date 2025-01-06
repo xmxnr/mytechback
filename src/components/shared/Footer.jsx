@@ -4,15 +4,24 @@ import './styles/Footer.css';
 const Footer = () => {
 	return (
 		<div className="footer__container flex-container">
-			<div>
+			<div className="footer__container--left flex-container">
 				<p>
-					My Technician{' '}
+					My Technician
 					<span>
-						<i class="bx bx-registered"></i>
+						<i className="bx bx-registered"></i>
 					</span>
 				</p>
+				<p className="footer__presentation">
+					Una web diseñada y desarrollada por Eduardo Manrique
+				</p>
+				<div>
+					<i className="bx bxl-linkedin"></i>
+					<i className="bx bxl-github"></i>
+				</div>
 			</div>
-			<div>Hola Mundo</div>
+			<div className="footer__container--right flex__container">
+				<p>EM</p>
+			</div>
 		</div>
 	);
 };
