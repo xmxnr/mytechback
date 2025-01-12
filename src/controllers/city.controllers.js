@@ -1,39 +1,37 @@
 const {
-	getAllUsersServices,
-	createUserService,
-	getOneUserService,
-	deleteUserService,
-	updateUserService,
-} = require('../services/user.services');
+	getAllCityServices,
+	createCityService,
+	getOneCityService,
+} = require('../services/city.services');
 const catchError = require('../utils/catchError');
 
 const getAll = catchError(async (req, res) => {
-	const results = await getAllUsersServices.findAll();
+	const results = await getAllCityServices.findAll();
 	return res.json(results);
 });
 
 const create = catchError(async (req, res) => {
-	const result = await createUserService.create(req.body);
+	const result = await createCityService.create(req.body);
 	return res.status(201).json(result);
 });
 
 const getOne = catchError(async (req, res) => {
 	const { id } = req.params;
-	const result = await getOneUserService(id);
+	const result = await getOneCityService.findByPk(id);
 	if (!result) return res.sendStatus(404);
 	return res.json(result);
 });
 
 const remove = catchError(async (req, res) => {
 	const { id } = req.params;
-	const result = await deleteUserService.destroy(id);
+	const result = await model.destroy(id);
 	if (!result) return res.sendStatus(404);
 	return res.sendStatus(204);
 });
 
 const update = catchError(async (req, res) => {
 	const { id } = req.params;
-	const result = await updateUserService.update(id, req.body);
+	const result = await model.update(req.body, id);
 	if (result[0] === 0) return res.sendStatus(404);
 	return res.json(result[1][0]);
 });

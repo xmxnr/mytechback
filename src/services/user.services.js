@@ -17,7 +17,7 @@ const updateUserService = async (id, body) => {
 };
 
 const deleteUserService = async (id) => {
-	return await contentSecurityPolicy.destroy({ where: { id } });
+	return await user.destroy({ where: { id } });
 };
 
 module.exports = {
