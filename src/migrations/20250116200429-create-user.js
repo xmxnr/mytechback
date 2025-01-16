@@ -1,4 +1,7 @@
 'use strict';
+
+const { SMALLINT } = require('sequelize');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
 	async up(queryInterface, Sequelize) {
@@ -21,39 +24,44 @@ module.exports = {
 				type: Sequelize.STRING,
 				allowNull: false,
 			},
-			email: {
-				type: Sequelize.STRING,
-				allowNull: false,
-			},
 			age: {
 				type: Sequelize.INTEGER,
+				allowNull: false,
+			},
+			mail: {
+				type: Sequelize.INTEGER,
+				allowNull: false,
+			},
+			password: {
+				type: Sequelize.STRING,
 				allowNull: false,
 			},
 			company: {
 				type: Sequelize.STRING,
 				allowNull: true,
 			},
+			phoneNumber: {
+				type: Sequelize.INTEGER,
+				allowNull: false,
+			},
 			roleId: {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 				references: {
-					model: 'roles',
-					key: 'id',
+					model: 'role',
+					key: 'id ',
 				},
-				onUpdate: 'CASCADE',
-				onDelete: 'SET NULL',
 			},
-      cityId: {
+			cityId: {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 				references: {
-					model: 'cities',
+					model: 'city',
 					key: 'id',
 				},
-				onUpdate: 'CASCADE',
-				onDelete: 'SET NULL',
 			},
 			createdAt: {
+				allowNull: false,
 				type: Sequelize.DATE,
 			},
 			updatedAt: {

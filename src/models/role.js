@@ -9,12 +9,12 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-			Role.hasMany(models.user);
+			role.belongsTo(models.user);
 		}
 	}
 	Role.init(
 		{
-			name: { type: DataTypes.STRING, allowNull: false },
+			name: DataTypes.STRING,
 		},
 		{
 			sequelize,

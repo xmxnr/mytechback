@@ -1,18 +1,18 @@
 const { user } = require('../models');
 
-const getAllUsersServices = async () => {
+const getAllUserServices = async () => {
 	return user.findAll();
 };
 
 const createUserService = async (body) => {
-	return await user.create(body);
+	return user.create(body);
 };
 
-const getOneUserService = async (id) => {
+const getOneUserSevice = async (id) => {
 	return await user.findByPk(id);
 };
 
-const updateUserService = async (id, body) => {
+const updateUserService = async (body, id) => {
 	return await user.update(body, { where: { id }, returning: true });
 };
 
@@ -21,9 +21,9 @@ const deleteUserService = async (id) => {
 };
 
 module.exports = {
-	getAllUsersServices,
+	getAllUserServices,
 	createUserService,
-	getOneUserService,
+	getOneUserSevice,
 	updateUserService,
 	deleteUserService,
 };
