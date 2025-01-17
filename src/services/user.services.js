@@ -1,7 +1,7 @@
-const { user } = require('../models');
+const { user, city, role } = require('../models');
 
 const getAllUserServices = async () => {
-	return user.findAll();
+	return user.findAll({ include: [city, role] });
 };
 
 const createUserService = async (body) => {
@@ -9,7 +9,7 @@ const createUserService = async (body) => {
 };
 
 const getOneUserSevice = async (id) => {
-	return await user.findByPk(id);
+	return await user.findByPk(id, { include: [city, role] });
 };
 
 const updateUserService = async (body, id) => {
