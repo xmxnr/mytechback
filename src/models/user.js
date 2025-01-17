@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-			user.hasOne(models.role);
-			user.hasOne(models.city);
+			User.belongsTo(models.role);
+			User.belongsTo(models.city);
 		}
 	}
 	User.init(

@@ -48,17 +48,21 @@ module.exports = {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 				references: {
-					model: 'role',
-					key: 'id ',
+					model: 'Roles',
+					key: 'id',
 				},
+				onUpdate: 'CASCADE',
+				onDelete: 'SET NULL',
 			},
 			cityId: {
 				type: Sequelize.INTEGER,
 				allowNull: false,
 				references: {
-					model: 'city',
+					model: 'Cities',
 					key: 'id',
 				},
+				onUpdate: 'CASCADE',
+				onDelete: 'SET NULL',
 			},
 			createdAt: {
 				allowNull: false,
