@@ -6,7 +6,7 @@ const {
 	getOneUserSevice,
 	deleteUserService,
 	updateUserService,
-} = require('../services/user.services');
+} = require('../services/user.services.js');
 
 const getAll = catchError(async (req, res) => {
 	const results = await getAllUserServices();

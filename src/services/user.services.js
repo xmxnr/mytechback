@@ -1,4 +1,6 @@
-const { user, city, role } = require('../models');
+const { user } = require('../models/user');
+const { city } = require('../models/city');
+const { role } = require('../models/role');
 
 const getAllUserServices = async () => {
 	return user.findAll({ include: [city, role] });

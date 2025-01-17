@@ -1,8 +1,8 @@
 {
-
 	"name": "mytechback",
 	"version": "1.0.0",
 	"main": "index.js",
+	"type": "commonjs",
 	"scripts": {
 		"start": "node src/server",
 		"dev": "nodemon src/server"
@@ -23,4 +23,5 @@
 	},
 	"devDependencies": {
 		"nodemon": "^3.1.9"
-	}}
+	}
+}
